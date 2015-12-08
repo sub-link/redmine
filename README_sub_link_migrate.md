@@ -19,8 +19,9 @@ pack plugings as separate folder
 ```
 tar -cvzf ~/Downloads/plugins.tar ./plugins
 ```
+
+```bash
 edit config/database.yml
-```
 bundle exec rake generate_secret_token
 RAILS_ENV=production bundle exec rake db:migrate
 RAILS_ENV=production bundle exec rake redmine:plugins:migrate
