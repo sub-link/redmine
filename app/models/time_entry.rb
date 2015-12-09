@@ -113,7 +113,7 @@ class TimeEntry < ActiveRecord::Base
   end
 
   def validate_time_entry
-    errors.add :hours, :invalid if hours && (hours < 0 || hours >= 1000)
+    errors.add :hours, :invalid if hours && (hours < -1000 || hours >= 1000)
     errors.add :project_id, :invalid if project.nil?
     errors.add :issue_id, :invalid if (issue_id && !issue) || (issue && project!=issue.project) || @invalid_issue_id
     errors.add :activity_id, :inclusion if activity_id_changed? && project && !project.activities.include?(activity)
