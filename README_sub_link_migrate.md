@@ -17,7 +17,7 @@ drop table taggings;
 
 pack plugings as separate folder
 ```
-tar -cvzf ~/Downloads/plugins.tar ./plugins
+tar -xvzf ~/Downloads/plugins.tar ./plugins
 ```
 
 ```bash
