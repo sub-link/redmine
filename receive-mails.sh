@@ -9,4 +9,5 @@ cd /srv/www/redmine
 
 rake -f /srv/www/redmine/Rakefile redmine:email:receive_imap RAILS_ENV=production \
 host=mail.sub-link.de username="inca-redmine@sub-link.de" password=qeGni0Fk \
-project=inca-mail-tickets allow_override=all tracker=Support status=Neu priority=Normal
+project=inca-mail-tickets allow_override=all tracker=Support status=Neu priority=Normal \
+unknown_user=accept
