@@ -7,7 +7,14 @@
 
 cd /srv/www/redmine
 
+### inca-redmine@sub-link.de ###
 rake -f /srv/www/redmine/Rakefile redmine:email:receive_imap RAILS_ENV=production \
 host=mail.sub-link.de username="inca-redmine@sub-link.de" password=qeGni0Fk \
+project=inca-mail-tickets allow_override=all tracker=Support status=Neu priority=Normal \
+unknown_user=accept no_permission_check=1
+
+### inca-support@sub-link.de ###
+rake -f /srv/www/redmine/Rakefile redmine:email:receive_imap RAILS_ENV=production \
+host=mail.sub-link.de username="inca-support@sub-link.de" password=T9LYfcnw \
 project=inca-mail-tickets allow_override=all tracker=Support status=Neu priority=Normal \
 unknown_user=accept no_permission_check=1
